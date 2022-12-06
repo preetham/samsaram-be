@@ -27,9 +27,10 @@ def authorize():
     data = request.get_json()
     code = data[constants.CODE]
     domain = request.headers.get(constants.HEADER_ORIGIN)
-    user = splitwise.authorize(code, domain)
+    response = splitwise.authorize(code, domain)
     return dict({
-        'user': user
+        'user': response['user'],
+        'token': response['token'],
     })
 
 @app.route('/api/v1/upload', methods=[constants.REQUEST_POST])
@@ -56,7 +57,8 @@ def upload():
 @app.route('/api/v1/groups', methods=[constants.REQUEST_GET])
 def groups():
     try:
-        response = splitwise.groups()
+        access_token = request.headers.get('Authorization')
+        response = splitwise.groups(access_token)
         return response
     except Exception as e:
         print(e)
@@ -65,7 +67,8 @@ def groups():
 @app.route('/api/v1/categories', methods=[constants.REQUEST_GET])
 def categories():
     try:
-        response = splitwise.categories()
+        access_token = request.headers.get('Authorization')
+        response = splitwise.categories(access_token=access_token)
         return response
     except Exception as e:
         print(e)
@@ -73,9 +76,10 @@ def categories():
 
 @app.route('/api/v1/expenses', methods=[constants.REQUEST_POST])
 def expenses():
+    access_token = request.headers.get('Authorization')
     raw_expenses = request.json['expenses']
     try:
-        created_expenses = splitwise.create_expense(raw_expenses=raw_expenses)
+        created_expenses = splitwise.create_expense(raw_expenses=raw_expenses, access_token=access_token)
         return created_expenses, 200
     except Exception as e:
         print(e)

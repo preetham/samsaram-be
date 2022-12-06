@@ -17,13 +17,20 @@ def authorize(code, domain):
     _client.setOAuth2AccessToken(token)
     user = _client.getCurrentUser()
     return dict({
-        'id': user.getId(),
-        'first_name': user.first_name,
-        'last_name': user.last_name,
-        'picture': user.getPicture().getSmall(),
+        'user': dict({
+            'id': user.getId(),
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'picture': user.getPicture().getSmall(),
+        }),
+        'token': token['access_token'],
     })
 
-def groups():
+def groups(access_token):
+    _client.setOAuth2AccessToken({
+        'access_token': access_token,
+        'token_type': 'bearer',
+    })
     groups = _client.getGroups()
     response = list()
     for group in groups:
@@ -35,7 +42,11 @@ def groups():
         response.append(g_json)
     return response
 
-def categories():
+def categories(access_token):
+    _client.setOAuth2AccessToken({
+        'access_token': access_token,
+        'token_type': 'bearer',
+    })
     categories = _client.getCategories()
     response = list()
     for category in categories:
@@ -52,7 +63,11 @@ def categories():
             response.append(sub_json)
     return response
 
-def create_expense(raw_expenses):
+def create_expense(raw_expenses, access_token):
+    _client.setOAuth2AccessToken({
+        'access_token': access_token,
+        'token_type': 'bearer',
+    })
     created_expenses = list()
     for e in raw_expenses:
         expense = Expense()
