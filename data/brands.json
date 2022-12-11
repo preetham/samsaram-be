@@ -1,0 +1,956 @@
+{
+    "Act Broadband": {
+        "name": "Act Broadband",
+        "alias": "Act Digital Home Entertainment Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/act-broadband.png",
+        "category_id": "1"
+    },
+    "Act Digital Home Entertainment Private Limited": {
+        "name": "Act Broadband",
+        "alias": "Act Digital Home Entertainment Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/act-broadband.png",
+        "category_id": "1"
+    },
+    "Adda": {
+        "name": "Adda",
+        "alias": "3Five8 Technologies Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/adda.png",
+        "category_id": "27"
+    },
+    "3Five8 Technologies Private Limited": {
+        "name": "Adda",
+        "alias": "3Five8 Technologies Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/adda.png",
+        "category_id": "27"
+    },
+    "Amazon": {
+        "name": "Amazon",
+        "alias": "Amazon It Services (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "Amazon Pay (India) Private Limited": {
+        "name": "Amazon",
+        "alias": "Amazon Pay (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "Amazon Development Centre (India) Private Limited": {
+        "name": "Amazon",
+        "alias": "Amazon Development Centre (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "Amazon Digital Services Private Limited": {
+        "name": "Amazon",
+        "alias": "Amazon Digital Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "Amazon Seller Services Private Limited": {
+        "name": "Amazon",
+        "alias": "Amazon Seller Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "Amazon Internet Services Private Limited": {
+        "name": "Amazon",
+        "alias": "Amazon Internet Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "Amazon It Services (India) Private Limited": {
+        "name": "Amazon",
+        "alias": "Amazon It Services (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/amazon.png",
+        "category_id": "27"
+    },
+    "APEPDCL": {
+        "name": "APEPDCL",
+        "alias": "Andhra Pradesh Eastern Power Distribution Company Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/apepdcl.png",
+        "category_id": "1"
+    },
+    "Andhra Pradesh Eastern Power Distribution Company Limited": {
+        "name": "APEPDCL",
+        "alias": "Andhra Pradesh Eastern Power Distribution Company Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/apepdcl.png",
+        "category_id": "1"
+    },
+    "Apollo Clinic": {
+        "name": "Apollo Clinic",
+        "alias": "Apollo Health and Lifestyle Limited ",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/apollo-clinic.png",
+        "category_id": "40"
+    },
+    "Apollo Health and Lifestyle Limited ": {
+        "name": "Apollo Clinic",
+        "alias": "Apollo Health and Lifestyle Limited ",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/apollo-clinic.png",
+        "category_id": "40"
+    },
+    "Apollo Pharmacy": {
+        "name": "Apollo Pharmacy",
+        "alias": "Apollo Pharmacies Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/apollo-pharmacy.png",
+        "category_id": "40"
+    },
+    "Apollo Pharmacies Limited": {
+        "name": "Apollo Pharmacy",
+        "alias": "Apollo Pharmacies Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/apollo-pharmacy.png",
+        "category_id": "40"
+    },
+    "APTDC": {
+        "name": "APTDC",
+        "alias": "Andhra Pradesh Tourism Development Corporation",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/aptdc.png",
+        "category_id": "31"
+    },
+    "Andhra Pradesh Tourism Development Corporation": {
+        "name": "APTDC",
+        "alias": "Andhra Pradesh Tourism Development Corporation",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/aptdc.png",
+        "category_id": "31"
+    },
+    "Ather Energy": {
+        "name": "Ather Energy",
+        "alias": "Ather Energy Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/ather-energy.png",
+        "category_id": "31"
+    },
+    "Ather Energy Private Limited": {
+        "name": "Ather Energy",
+        "alias": "Ather Energy Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/ather-energy.png",
+        "category_id": "31"
+    },
+    "BESCOM": {
+        "name": "BESCOM",
+        "alias": "Bangalore Electricity Supply Company Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/bescom.png",
+        "category_id": "1"
+    },
+    "Bangalore Electricity Supply Company Limited": {
+        "name": "BESCOM",
+        "alias": "Bangalore Electricity Supply Company Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/bescom.png",
+        "category_id": "1"
+    },
+    "Bigbasket": {
+        "name": "Bigbasket",
+        "alias": "Innovative Retail Concepts Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/big-basket.png",
+        "category_id": "25"
+    },
+    "Innovative Retail Concepts Private Limited": {
+        "name": "Bigbasket",
+        "alias": "Innovative Retail Concepts Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/big-basket.png",
+        "category_id": "25"
+    },
+    "BlissClub": {
+        "name": "BlissClub",
+        "alias": "Blissclub Fitness Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/blissclub.png",
+        "category_id": "40"
+    },
+    "Blissclub Fitness Private Limited": {
+        "name": "BlissClub",
+        "alias": "Blissclub Fitness Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/blissclub.png",
+        "category_id": "40"
+    },
+    "BookMyShow": {
+        "name": "BookMyShow",
+        "alias": "Big Tree Entertainment Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/bookmyshow.png",
+        "category_id": "19"
+    },
+    "Big Tree Entertainment Private Limited": {
+        "name": "BookMyShow",
+        "alias": "Big Tree Entertainment Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/bookmyshow.png",
+        "category_id": "19"
+    },
+    "Caratlane": {
+        "name": "Caratlane",
+        "alias": "Caratlane Trading Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/caratlane.png",
+        "category_id": "40"
+    },
+    "Caratlane Trading Private Limited": {
+        "name": "Caratlane",
+        "alias": "Caratlane Trading Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/caratlane.png",
+        "category_id": "40"
+    },
+    "ClearTax": {
+        "name": "ClearTax",
+        "alias": "Defmacro Software Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/cleartax.png",
+        "category_id": "40"
+    },
+    "Defmacro Software Private Limited": {
+        "name": "ClearTax",
+        "alias": "Defmacro Software Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/cleartax.png",
+        "category_id": "40"
+    },
+    "ClearTrip": {
+        "name": "ClearTrip",
+        "alias": "Cleartrip Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/cleartrip.png",
+        "category_id": "31"
+    },
+    "Cleartrip Private Limited": {
+        "name": "ClearTrip",
+        "alias": "Cleartrip Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/cleartrip.png",
+        "category_id": "31"
+    },
+    "Country Delight": {
+        "name": "Country Delight",
+        "alias": "Country Delight",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/country-delight.png",
+        "category_id": "25"
+    },
+    "Decathlon": {
+        "name": "Decathlon",
+        "alias": "Prodin Sporting Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/decathlon.png",
+        "category_id": "40"
+    },
+    "Decathlon Sa": {
+        "name": "Decathlon",
+        "alias": "Decathlon Sa",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/decathlon.png",
+        "category_id": "40"
+    },
+    "Decathlon Sports India Private Limited": {
+        "name": "Decathlon",
+        "alias": "Decathlon Sports India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/decathlon.png",
+        "category_id": "40"
+    },
+    "Indeca Sporting Goods Private Limited": {
+        "name": "Decathlon",
+        "alias": "Indeca Sporting Goods Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/decathlon.png",
+        "category_id": "40"
+    },
+    "Prodin Sporting Private Limited": {
+        "name": "Decathlon",
+        "alias": "Prodin Sporting Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/decathlon.png",
+        "category_id": "40"
+    },
+    "Dominos": {
+        "name": "Dominos",
+        "alias": "Domino's Pizza Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dominos.png",
+        "category_id": "25"
+    },
+    "Domino's Pizza Services Private Limited": {
+        "name": "Dominos",
+        "alias": "Domino's Pizza Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dominos.png",
+        "category_id": "25"
+    },
+    "DTDC": {
+        "name": "DTDC",
+        "alias": "Dtdc 3Pl And Fulfilment Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dtdc.png",
+        "category_id": "40"
+    },
+    "Dtdc Express Limited": {
+        "name": "DTDC",
+        "alias": "Dtdc Express Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dtdc.png",
+        "category_id": "40"
+    },
+    "Dtdc Worldwide Express Limited": {
+        "name": "DTDC",
+        "alias": "Dtdc Worldwide Express Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dtdc.png",
+        "category_id": "40"
+    },
+    "Dtdc E-Commerce Logistics Limited": {
+        "name": "DTDC",
+        "alias": "Dtdc E-Commerce Logistics Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dtdc.png",
+        "category_id": "40"
+    },
+    "Dtdc 3Pl And Fulfilment Limited": {
+        "name": "DTDC",
+        "alias": "Dtdc 3Pl And Fulfilment Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dtdc.png",
+        "category_id": "40"
+    },
+    "Dunzo": {
+        "name": "Dunzo",
+        "alias": "Dunzo Digital Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dunzo.png",
+        "category_id": "25"
+    },
+    "Dunzo Digital Private Limited": {
+        "name": "Dunzo",
+        "alias": "Dunzo Digital Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/dunzo.png",
+        "category_id": "25"
+    },
+    "FabIndia": {
+        "name": "FabIndia",
+        "alias": "Fabindia Overseas Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/fabindia.png",
+        "category_id": "40"
+    },
+    "Fabindia Overseas Private Limited": {
+        "name": "FabIndia",
+        "alias": "Fabindia Overseas Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/fabindia.png",
+        "category_id": "40"
+    },
+    "Flipkart": {
+        "name": "Flipkart",
+        "alias": "Flipkart India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/flipkart.png",
+        "category_id": "27"
+    },
+    "Flipkart India Private Limited": {
+        "name": "Flipkart",
+        "alias": "Flipkart India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/flipkart.png",
+        "category_id": "27"
+    },
+    "FnP": {
+        "name": "FnP",
+        "alias": "Ferns N Petals Pvt Ltd",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/fnp.png",
+        "category_id": "40"
+    },
+    "Ferns N Petals Pvt Ltd": {
+        "name": "FnP",
+        "alias": "Ferns N Petals Pvt Ltd",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/fnp.png",
+        "category_id": "40"
+    },
+    "Haagen-Dazs": {
+        "name": "Haagen-Dazs",
+        "alias": "Haagen-Dazs",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/haagen-dazs.png",
+        "category_id": "25"
+    },
+    "Happyland Supermarket": {
+        "name": "Happyland Supermarket",
+        "alias": "Happyland Supermarket",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/supermarket.png",
+        "category_id": "27"
+    },
+    "Hatti Kaapi": {
+        "name": "Hatti Kaapi",
+        "alias": "Hatti Food And Beverages Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/hatti-kaapi.png",
+        "category_id": "25"
+    },
+    "Hatti Food And Beverages Private Limited": {
+        "name": "Hatti Kaapi",
+        "alias": "Hatti Food And Beverages Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/hatti-kaapi.png",
+        "category_id": "25"
+    },
+    "Health and Glow": {
+        "name": "Health and Glow",
+        "alias": "Health & Glow Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/health-and-glow.png",
+        "category_id": "40"
+    },
+    "Health & Glow Private Limited": {
+        "name": "Health and Glow",
+        "alias": "Health & Glow Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/health-and-glow.png",
+        "category_id": "40"
+    },
+    "Disney+ Hotstar": {
+        "name": "Disney+ Hotstar",
+        "alias": "Hotstar",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/hotstar.png",
+        "category_id": "19"
+    },
+    "Novi Digital Entertainment ": {
+        "name": "Disney+ Hotstar",
+        "alias": "Novi Digital Entertainment ",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/hotstar.png",
+        "category_id": "19"
+    },
+    "Hotstar": {
+        "name": "Disney+ Hotstar",
+        "alias": "Hotstar",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/hotstar.png",
+        "category_id": "19"
+    },
+    "Indian Music Experience Museum": {
+        "name": "Indian Music Experience Museum",
+        "alias": "Foley Designs",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/indian-music-experience-museum.png",
+        "category_id": "19"
+    },
+    "Foley Designs": {
+        "name": "Indian Music Experience Museum",
+        "alias": "Foley Designs",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/indian-music-experience-museum.png",
+        "category_id": "19"
+    },
+    "Indian Oil": {
+        "name": "Indian Oil",
+        "alias": "Indian Oil Corporation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/indian-oil.png",
+        "category_id": "1"
+    },
+    "Indian Oil Corporation Limited": {
+        "name": "Indian Oil",
+        "alias": "Indian Oil Corporation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/indian-oil.png",
+        "category_id": "1"
+    },
+    "Indigo": {
+        "name": "Indigo",
+        "alias": "Interglobe Aviation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/indigo.png",
+        "category_id": "31"
+    },
+    "Interglobe Aviation Limited": {
+        "name": "Indigo",
+        "alias": "Interglobe Aviation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/indigo.png",
+        "category_id": "31"
+    },
+    "IRCTC": {
+        "name": "IRCTC",
+        "alias": "Indian Railway Corporation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/irctc.png",
+        "category_id": "31"
+    },
+    "Indian Railway Catering And Tourism Corporation Limited": {
+        "name": "IRCTC",
+        "alias": "Indian Railway Catering And Tourism Corporation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/irctc.png",
+        "category_id": "31"
+    },
+    "Indian Railway Corporation Limited": {
+        "name": "IRCTC",
+        "alias": "Indian Railway Corporation Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/irctc.png",
+        "category_id": "31"
+    },
+    "Jio Mobile": {
+        "name": "Jio Mobile",
+        "alias": "Reliance Jio Infocomm Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/jio.png",
+        "category_id": "1"
+    },
+    "Reliance Jio Infocomm Limited": {
+        "name": "Jio Mobile",
+        "alias": "Reliance Jio Infocomm Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/jio.png",
+        "category_id": "1"
+    },
+    "Jockey": {
+        "name": "Jockey",
+        "alias": "Jockey India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/jockey.png",
+        "category_id": "40"
+    },
+    "Page Industries Limited": {
+        "name": "Jockey",
+        "alias": "Page Industries Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/jockey.png",
+        "category_id": "40"
+    },
+    "Jockey India": {
+        "name": "Jockey",
+        "alias": "Jockey India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/jockey.png",
+        "category_id": "40"
+    },
+    "Keventers": {
+        "name": "Keventers",
+        "alias": "Super Milk Products Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/keventers.png",
+        "category_id": "25"
+    },
+    "Super Milk Products Private Limited": {
+        "name": "Keventers",
+        "alias": "Super Milk Products Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/keventers.png",
+        "category_id": "25"
+    },
+    "KFC": {
+        "name": "KFC",
+        "alias": "Yum Restaurants (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/kfc.png",
+        "category_id": "25"
+    },
+    "Yum Restaurants (India) Private Limited": {
+        "name": "KFC",
+        "alias": "Yum Restaurants (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/kfc.png",
+        "category_id": "25"
+    },
+    "Laundrokart": {
+        "name": "Laundrokart",
+        "alias": "Kleenco On-Demand Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/laundrokart.png",
+        "category_id": "1"
+    },
+    "Kleenco On-Demand Services Private Limited": {
+        "name": "Laundrokart",
+        "alias": "Kleenco On-Demand Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/laundrokart.png",
+        "category_id": "1"
+    },
+    "Licious": {
+        "name": "Licious",
+        "alias": "Delightful Gourmet Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/licious.png",
+        "category_id": "25"
+    },
+    "Delightful Gourmet Private Limited": {
+        "name": "Licious",
+        "alias": "Delightful Gourmet Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/licious.png",
+        "category_id": "25"
+    },
+    "LIC": {
+        "name": "LIC",
+        "alias": "Life Insurance Corporation of India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/lic.png",
+        "category_id": "40"
+    },
+    "Life Insurance Corporation of India": {
+        "name": "LIC",
+        "alias": "Life Insurance Corporation of India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/lic.png",
+        "category_id": "40"
+    },
+    "Lifestyle": {
+        "name": "Lifestyle",
+        "alias": "The Landmark Group",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/lifestyle.png",
+        "category_id": "40"
+    },
+    "The Landmark Group": {
+        "name": "Lifestyle",
+        "alias": "The Landmark Group",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/lifestyle.png",
+        "category_id": "40"
+    },
+    "MakeMyTrip": {
+        "name": "MakeMyTrip",
+        "alias": "Makemytrip (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/makemytrip.png",
+        "category_id": "31"
+    },
+    "Makemytrip (India) Private Limited": {
+        "name": "MakeMyTrip",
+        "alias": "Makemytrip (India) Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/makemytrip.png",
+        "category_id": "31"
+    },
+    "Marasa Sarovar": {
+        "name": "Marasa Sarovar",
+        "alias": "Marasa Sarovar Premiere",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/marasa-sarovar.png",
+        "category_id": "31"
+    },
+    "Marasa Sarovar Premiere": {
+        "name": "Marasa Sarovar",
+        "alias": "Marasa Sarovar Premiere",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/marasa-sarovar.png",
+        "category_id": "31"
+    },
+    "Medplus": {
+        "name": "Medplus",
+        "alias": "Medplus Health Services Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/medplus.svg",
+        "category_id": "40"
+    },
+    "Medplus Health Services Limited": {
+        "name": "Medplus",
+        "alias": "Medplus Health Services Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/medplus.svg",
+        "category_id": "40"
+    },
+    "Mochi": {
+        "name": "Mochi",
+        "alias": "Mochi - The Shoe Shoppe",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/mochi.png",
+        "category_id": "40"
+    },
+    "Mochi - The Shoe Shoppe": {
+        "name": "Mochi",
+        "alias": "Mochi - The Shoe Shoppe",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/mochi.png",
+        "category_id": "40"
+    },
+    "More": {
+        "name": "More",
+        "alias": "More Hypermarket",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/more.png",
+        "category_id": "25"
+    },
+    "More Supermarket": {
+        "name": "More",
+        "alias": "More Supermarket",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/more.png",
+        "category_id": "25"
+    },
+    "More Retail Private Limited": {
+        "name": "More",
+        "alias": "More Retail Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/more.png",
+        "category_id": "25"
+    },
+    "More Hypermarket": {
+        "name": "More",
+        "alias": "More Hypermarket",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/more.png",
+        "category_id": "25"
+    },
+    "Myntra": {
+        "name": "Myntra",
+        "alias": "Myntra Designs Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/myntra.png",
+        "category_id": "40"
+    },
+    "Myntra Designs Private Limited": {
+        "name": "Myntra",
+        "alias": "Myntra Designs Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/myntra.png",
+        "category_id": "40"
+    },
+    "Nando's": {
+        "name": "Nando's",
+        "alias": "Nandos",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/nandos.png",
+        "category_id": "25"
+    },
+    "Nando's Karnataka Restaurants Private Limited": {
+        "name": "Nando's",
+        "alias": "Nando's Karnataka Restaurants Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/nandos.png",
+        "category_id": "25"
+    },
+    "Nandos": {
+        "name": "Nando's",
+        "alias": "Nandos",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/nandos.png",
+        "category_id": "25"
+    },
+    "Netflix": {
+        "name": "Netflix",
+        "alias": "Netflix Entertainment Services India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/netflix.png",
+        "category_id": "19"
+    },
+    "Netflix Entertainment Services India": {
+        "name": "Netflix",
+        "alias": "Netflix Entertainment Services India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/netflix.png",
+        "category_id": "19"
+    },
+    "Nykaa": {
+        "name": "Nykaa",
+        "alias": "Nykaa Fashion Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/nykaa.png",
+        "category_id": "40"
+    },
+    "Nykaa Fashion Private Limited": {
+        "name": "Nykaa",
+        "alias": "Nykaa Fashion Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/nykaa.png",
+        "category_id": "40"
+    },
+    "Plus Point Hypermarket": {
+        "name": "Plus Point Hypermarket",
+        "alias": "Plus Point Hypermarket",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/supermarket.png",
+        "category_id": "27"
+    },
+    "Puma": {
+        "name": "Puma",
+        "alias": "Puma Sports India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/puma.png",
+        "category_id": "40"
+    },
+    "Puma Sports India Private Limited": {
+        "name": "Puma",
+        "alias": "Puma Sports India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/puma.png",
+        "category_id": "40"
+    },
+    "Quick Heal": {
+        "name": "Quick Heal",
+        "alias": "Quick Heal Technologies Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/quick-heal.png",
+        "category_id": "40"
+    },
+    "Quick Heal Technologies Limited": {
+        "name": "Quick Heal",
+        "alias": "Quick Heal Technologies Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/quick-heal.png",
+        "category_id": "40"
+    },
+    "SBI Card": {
+        "name": "SBI Card",
+        "alias": "Sbi Cards And Payment Services Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sbi-card.png",
+        "category_id": "40"
+    },
+    "Sbi Cards And Payment Services Limited": {
+        "name": "SBI Card",
+        "alias": "Sbi Cards And Payment Services Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sbi-card.png",
+        "category_id": "40"
+    },
+    "Sephora": {
+        "name": "Sephora",
+        "alias": "Arvind Beauty Brands Retail Pvt Ltd",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sephora.png",
+        "category_id": "40"
+    },
+    "Arvind Beauty Brands Retail Pvt Ltd": {
+        "name": "Sephora",
+        "alias": "Arvind Beauty Brands Retail Pvt Ltd",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sephora.png",
+        "category_id": "40"
+    },
+    "SJR Watermark Store": {
+        "name": "SJR Watermark Store",
+        "alias": "Dattu Rao",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/supermarket.png",
+        "category_id": "25"
+    },
+    "Dattu Rao": {
+        "name": "SJR Watermark Store",
+        "alias": "Dattu Rao",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/supermarket.png",
+        "category_id": "25"
+    },
+    "SonyLIV": {
+        "name": "SonyLIV",
+        "alias": "Sony Pictures Networks India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sony-live.png",
+        "category_id": "19"
+    },
+    "Sony Pictures Networks India": {
+        "name": "SonyLIV",
+        "alias": "Sony Pictures Networks India",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sony-live.png",
+        "category_id": "19"
+    },
+    "SPAR": {
+        "name": "SPAR",
+        "alias": "Max Hypermarket India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/spar-hypermarket.png",
+        "category_id": "27"
+    },
+    "Max Hypermarket India Private Limited": {
+        "name": "SPAR",
+        "alias": "Max Hypermarket India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/spar-hypermarket.png",
+        "category_id": "27"
+    },
+    "Spotify": {
+        "name": "Spotify",
+        "alias": "SPOTIFY INDIA PRIVATE LIMITED",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/spar-hypermarket.png",
+        "category_id": "19"
+    },
+    "SPOTIFY INDIA PRIVATE LIMITED": {
+        "name": "Spotify",
+        "alias": "SPOTIFY INDIA PRIVATE LIMITED",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/spar-hypermarket.png",
+        "category_id": "19"
+    },
+    "Starbucks": {
+        "name": "Starbucks",
+        "alias": "Tata Starbucks Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/starbucks.png",
+        "category_id": "25"
+    },
+    "Tata Starbucks Private Limited": {
+        "name": "Starbucks",
+        "alias": "Tata Starbucks Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/starbucks.png",
+        "category_id": "25"
+    },
+    "Sun TV Network": {
+        "name": "Sun TV Network",
+        "alias": "Sun Tv Network Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sun-tv-network.png",
+        "category_id": "19"
+    },
+    "Sun Tv Network Limited": {
+        "name": "Sun TV Network",
+        "alias": "Sun Tv Network Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/sun-tv-network.png",
+        "category_id": "19"
+    },
+    "Swiggy": {
+        "name": "Swiggy",
+        "alias": "Bundl Technologies Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/swiggy.png",
+        "category_id": "25"
+    },
+    "Bundl Technologies Private Limited": {
+        "name": "Swiggy",
+        "alias": "Bundl Technologies Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/swiggy.png",
+        "category_id": "25"
+    },
+    "TenderCuts": {
+        "name": "TenderCuts",
+        "alias": "Gfm Retail Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/tendercuts.png",
+        "category_id": "25"
+    },
+    "Gfm Retail Private Limited": {
+        "name": "TenderCuts",
+        "alias": "Gfm Retail Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/tendercuts.png",
+        "category_id": "25"
+    },
+    "Westside": {
+        "name": "Westside",
+        "alias": "Trent Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/westside.png",
+        "category_id": "40"
+    },
+    "Trent Limited": {
+        "name": "Westside",
+        "alias": "Trent Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/westside.png",
+        "category_id": "40"
+    },
+    "The Hindu": {
+        "name": "The Hindu",
+        "alias": "The Hindu",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/the-hindu.png",
+        "category_id": "27"
+    },
+    "Titan": {
+        "name": "Titan",
+        "alias": "Titan Company Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/titan.png",
+        "category_id": "40"
+    },
+    "Titan Company Limited": {
+        "name": "Titan",
+        "alias": "Titan Company Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/titan.png",
+        "category_id": "40"
+    },
+    "Uber": {
+        "name": "Uber",
+        "alias": "Uber India Technology Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/uber.png",
+        "category_id": "31"
+    },
+    "Uber India Technology Private Limited": {
+        "name": "Uber",
+        "alias": "Uber India Technology Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/uber.png",
+        "category_id": "31"
+    },
+    "Urban Company": {
+        "name": "Urban Company",
+        "alias": "Urbanclap Technologies India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/urban-company.png",
+        "category_id": "27"
+    },
+    "Urbanclap Technologies India Private Limited": {
+        "name": "Urban Company",
+        "alias": "Urbanclap Technologies India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/urban-company.png",
+        "category_id": "27"
+    },
+    "Urban Ladder": {
+        "name": "Urban Ladder",
+        "alias": "Urban Ladder Home Solutions Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/urban-ladder.png",
+        "category_id": "27"
+    },
+    "Urban Ladder Home Decor Solutions Private Limited": {
+        "name": "Urban Ladder",
+        "alias": "Urban Ladder Home Decor Solutions Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/urban-ladder.png",
+        "category_id": "27"
+    },
+    "Urban Ladder Home Solutions Private Limited": {
+        "name": "Urban Ladder",
+        "alias": "Urban Ladder Home Solutions Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/urban-ladder.png",
+        "category_id": "27"
+    },
+    "Vistara Air": {
+        "name": "Vistara Air",
+        "alias": "Tata Sia Airlines",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/vistara.png",
+        "category_id": "31"
+    },
+    "Tata Sia Airlines": {
+        "name": "Vistara Air",
+        "alias": "Tata Sia Airlines",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/vistara.png",
+        "category_id": "31"
+    },
+    "Wellness Forever": {
+        "name": "Wellness Forever",
+        "alias": "Wellness Forever Medicare Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/wellness-forever.png",
+        "category_id": "40"
+    },
+    "Wellness Forever Medicare Limited": {
+        "name": "Wellness Forever",
+        "alias": "Wellness Forever Medicare Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/wellness-forever.png",
+        "category_id": "40"
+    },
+    "Zara": {
+        "name": "Zara",
+        "alias": "Inditex Trent Retail India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/zara.png",
+        "category_id": "40"
+    },
+    "Inditex Trent Retail India Private Limited": {
+        "name": "Zara",
+        "alias": "Inditex Trent Retail India Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/zara.png",
+        "category_id": "40"
+    },
+    "Zerodha": {
+        "name": "Zerodha",
+        "alias": "Zerodha Securities Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/zerodha.svg",
+        "category_id": "40"
+    },
+    "Zerodha Securities Private Limited": {
+        "name": "Zerodha",
+        "alias": "Zerodha Securities Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/zerodha.svg",
+        "category_id": "40"
+    },
+    "Zomato": {
+        "name": "Zomato",
+        "alias": "Zomato Culinary Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/zomato.png",
+        "category_id": "25"
+    },
+    "Zomato Culinary Services Private Limited": {
+        "name": "Zomato",
+        "alias": "Zomato Culinary Services Private Limited",
+        "logo": "https://samsaram-brand-logos.s3.ap-south-1.amazonaws.com/zomato.png",
+        "category_id": "25"
+    }
+}

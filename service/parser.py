@@ -8,7 +8,7 @@ from jellyfish import jaro_similarity
 from config import settings
 from util import constants
 
-with open('./statements/brands.json', 'r') as f:
+with open('./data/brands.json', 'r') as f:
     brand_data = json.load(f)
 
 def excel(input_data: bytes, bank: str):

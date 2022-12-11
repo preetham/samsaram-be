@@ -5,7 +5,7 @@ from app import app
 from config.settings import app_config
 
 def number_of_workers():
-    return (multiprocessing.cpu_count() * 2) + 1
+    return 1
 
 class SamsaramApp(gunicorn.app.base.BaseApplication):
     def __init__(self, app, options=None):
