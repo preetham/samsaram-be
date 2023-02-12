@@ -79,8 +79,8 @@ def create_expense(raw_expenses, access_token):
 
         category = Category()
         category.setId(e['category_id'])
-
         expense.setCategory(category)
+
         expense.setDate(e['date'])
 
         created_expense, err = _client.createExpense(expense)

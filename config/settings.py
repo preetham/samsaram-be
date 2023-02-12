@@ -3,7 +3,7 @@ import os
 class _AxisBankConfig(object):
     """Axis Bank specific configuration
     """
-    SKIP_ROWS = 14
+    SKIP_ROWS = 15
     SKIP_ROWS_ALTERNATE = 8
     COLUMN_RANGE = None
     DATA_COLUMNS = list(['Tran Date', 'PARTICULARS', 'DR'])
