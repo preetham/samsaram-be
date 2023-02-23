@@ -6,20 +6,23 @@ import pandas as pd
 from jellyfish import jaro_similarity
 
 from config import settings
-from util import constants
+from util import constants, log
 
 with open('./data/brands.json', 'r') as f:
     brand_data = json.load(f)
 
 def excel(input_data: bytes, bank: str):
     config = settings.bank_configs[bank]
+    skip_rows = calculate_skip_row(input_data, bank=bank)
+    log.logger.debug(skip_rows)
     try:
-        data_frame = pd.read_excel(input_data, skiprows=config.SKIP_ROWS, usecols=config.COLUMN_RANGE)
+        data_frame = pd.read_excel(input_data, skiprows=skip_rows, usecols=config.COLUMN_RANGE, keep_default_na=False)
         required_fields = data_frame[config.DATA_COLUMNS]
+        return required_fields
     except Exception as e:
-        data_frame = pd.read_excel(input_data, skiprows=config.SKIP_ROWS_ALTERNATE, usecols=config.COLUMN_RANGE)
-        required_fields = data_frame[config.DATA_COLUMNS]
-    return required_fields
+        log.logger.error(e, exc_info=True)
+        raise Exception()
+
 
 def field_extractor(input_data: pd.DataFrame, bank: str):
     bank_config = settings.bank_configs[bank]
@@ -81,6 +84,7 @@ def _info_extractor(description, bank):
     try:
         return method(description=description, bank_config=bank_config)
     except Exception as e:
+        log.logger.debug(e)
         return ('', '', '')
 
 def _sbi_info(description, bank_config):
@@ -173,7 +177,19 @@ def brand_extractor(text: str):
             return brand_data[brand]
         if l_text in brand_str:
             return brand_data[brand]
-        
+
+def calculate_skip_row(input_data: bytes, bank: str):
+    config = settings.bank_configs[bank]
+    try:
+        data_frame = pd.read_excel(input_data, nrows=settings.app_config.READ_ROWS_THRESHOLD, keep_default_na=False)
+        for idx, series in data_frame.iterrows():
+            row_values = series.values
+            for x in row_values:
+                if x in config.DATA_COLUMNS:
+                    return idx + settings.app_config.READ_ROWS_OFFSET
+    except Exception as e:
+        log.logger.error(e, exc_info=True)
+        return config.SKIP_ROWS
 
 _info_method_map = dict({
     constants.SBI: _sbi_info,

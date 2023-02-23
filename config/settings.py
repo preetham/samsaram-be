@@ -4,7 +4,6 @@ class _AxisBankConfig(object):
     """Axis Bank specific configuration
     """
     SKIP_ROWS = 15
-    SKIP_ROWS_ALTERNATE = 8
     COLUMN_RANGE = None
     DATA_COLUMNS = list(['Tran Date', 'PARTICULARS', 'DR'])
     PAYMENT_MODE_REGEX = '(UPI)|(IMPS)|(NEFT)|(INB)|(POS)'
@@ -19,7 +18,6 @@ class _SBIConfig(object):
     """SBI specific configuration
     """
     SKIP_ROWS = 20
-    SKIP_ROWS_ALTERNATE = 20
     COLUMN_RANGE = None
     DATA_COLUMNS = list(['Txn Date', 'Description', '        Debit'])
     PAYMENT_MODE_REGEX = '(UPI)|(INB)'
@@ -31,7 +29,6 @@ class _SBIConfig(object):
 
 class _ICICIConfig(object):
     SKIP_ROWS = 12
-    SKIP_ROWS_ALTERNATE = 12
     COLUMN_RANGE = 'B:I'
     DATA_COLUMNS = list(['Transaction Date', 'Transaction Remarks', 'Withdrawal Amount (INR )'])
     PAYMENT_MODE_REGEX = '(UPI)|(VPS)|(IPS)|(MMT)'
@@ -50,6 +47,8 @@ class _AppConfig(object):
     SPLITWISE_CONSUMER_KEY=os.getenv('SPLITWISE_CONSUMER_KEY')
     SPLITWISE_CONSUMER_SECRET=os.getenv('SPLITWISE_CONSUMER_SECRET')
     SPLITWISE_RUPEE_CODE='INR'
+    READ_ROWS_THRESHOLD=100
+    READ_ROWS_OFFSET=1
     REDIRECT_ENDPOINT='/home'
     SIMILARITY_THRESHOLD=0.8
     APP_HOST='0.0.0.0'

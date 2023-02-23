@@ -5,7 +5,7 @@ from flask_cors import CORS
 from config.settings import app_config
 from service import statement as statement_service
 from service import splitwise
-from util import constants
+from util import constants, log
 
 app = Flask(__name__)
 app.config[constants.MAX_CONTENT_LENGTH] = app_config.FLASK_MAX_CONTENT_LENGTH
@@ -51,7 +51,7 @@ def upload():
         expense_list = pre_processor.sanitize()
         return dict({'data': expense_list})
     except Exception as e:
-        print(e)
+        log.logger.error(e, exc_info=True)
         return constants.INTERNAL_ERROR_DICT, 500
 
 @app.route('/api/v1/groups', methods=[constants.REQUEST_GET])
@@ -61,7 +61,7 @@ def groups():
         response = splitwise.groups(access_token)
         return response
     except Exception as e:
-        print(e)
+        log.logger.error(e, exc_info=True)
         return constants.INTERNAL_ERROR_DICT, 500
 
 @app.route('/api/v1/categories', methods=[constants.REQUEST_GET])
@@ -71,7 +71,7 @@ def categories():
         response = splitwise.categories(access_token=access_token)
         return response
     except Exception as e:
-        print(e)
+        log.logger.error(e, exc_info=True)
         return constants.INTERNAL_ERROR_DICT, 500
 
 @app.route('/api/v1/expenses', methods=[constants.REQUEST_POST])
@@ -82,7 +82,7 @@ def expenses():
         created_expenses = splitwise.create_expense(raw_expenses=raw_expenses, access_token=access_token)
         return created_expenses, 200
     except Exception as e:
-        print(e)
+        log.logger.error(e, exc_info=True)
         return constants.INTERNAL_ERROR_DICT, 500 
 
 def allowed_file(filename):

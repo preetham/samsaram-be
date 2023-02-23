@@ -1,6 +1,7 @@
 from splitwise import Splitwise, Expense, Category
 
 from config.settings import app_config
+from util import log
 
 _client = Splitwise(app_config.SPLITWISE_CONSUMER_KEY, app_config.SPLITWISE_CONSUMER_SECRET)
 
@@ -85,7 +86,7 @@ def create_expense(raw_expenses, access_token):
 
         created_expense, err = _client.createExpense(expense)
         if err:
-            print(err.getErrors())
+            log.logger.error(err.getErrors())
             continue
         created_expenses.append(dict({
             'id': created_expense.getId(),
