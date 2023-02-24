@@ -11,35 +11,22 @@ from util import constants, log
 with open('./data/brands.json', 'r') as f:
     brand_data = json.load(f)
 
+desc_regex = re.compile(settings.app_config.DESCRIPTION_REGEX, re.IGNORECASE)
+am_regex = re.compile(settings.app_config.AMOUNT_REGEX)
+
 def excel(input_data: bytes, bank: str):
-    config = settings.bank_configs[bank]
-    skip_rows = calculate_skip_row(input_data, bank=bank)
-    log.logger.debug(skip_rows)
     try:
-        data_frame = pd.read_excel(input_data, skiprows=skip_rows, usecols=config.COLUMN_RANGE, keep_default_na=False)
-        required_fields = data_frame[config.DATA_COLUMNS]
-        return required_fields
+        return txn_extractor(input_data=input_data, bank=bank)
     except Exception as e:
         log.logger.error(e, exc_info=True)
-        raise Exception()
+        raise e
 
-
-def field_extractor(input_data: pd.DataFrame, bank: str):
-    bank_config = settings.bank_configs[bank]
+def field_extractor(txns: list, bank: str):
     app_config = settings.app_config
     expense_list = list()
-    for idx, series in input_data.iterrows():
-        row = series.values
-        if not len(row) > 0:
-            continue
-        if pd.isna(row[0]) or pd.isna(row[1]) or pd.isna(row[2]):
-            continue
-        if (type(row[2]) == int or type(row[2]) == float) and row[2] <= 0:
-            continue
-        if type(row[2]) == str and len(row[2].strip()) == 0:
-            continue
+    for txn in txns:
         mode = ''
-        (mode, payment_type, payee) = _info_extractor(row[1], bank)
+        (mode, payment_type, payee) = _info_extractor(txn['description'], bank)
         if not(payment_type == constants.P2A or payment_type == constants.P2M):
             continue
         category_id = '2'
@@ -61,15 +48,10 @@ def field_extractor(input_data: pd.DataFrame, bank: str):
                     'name': payee,
                     'logo': '',
                 })
-        if type(row[2]) == str:
-            amount = float(row[2].strip())
-        else:
-            amount = float(row[2])
-        txn_date = datetime.strptime(row[0].strip(), bank_config.DATE_FORMAT)
         expense = dict({
-            'transaction_date': txn_date.strftime(app_config.DATE_OUTPUT_FORMAT),
-            'description': row[1],
-            'amount': amount,
+            'transaction_date': txn['transaction_date'].strftime(app_config.DATE_OUTPUT_FORMAT),
+            'description': txn['description'],
+            'amount': txn['amount'],
             'mode': mode,
             'transferred_to': transferred_to,
             'category_id': category_id,
@@ -145,7 +127,7 @@ def _axis_info(description, bank_config):
     if payment_mode_match is None:
         raise ValueError('payment method not supported')
     payment_mode = (payment_mode_match.group()).lower()
-    info_regex = ''     
+    info_regex = ''
     if payment_mode in [constants.UPI, constants.IMPS, constants.NEFT]:
         info_regex = re.compile(bank_config.INFO_REGEX[constants.UPI])
         info_match = info_regex.search(description)
@@ -178,18 +160,48 @@ def brand_extractor(text: str):
         if l_text in brand_str:
             return brand_data[brand]
 
-def calculate_skip_row(input_data: bytes, bank: str):
-    config = settings.bank_configs[bank]
+def txn_extractor(input_data: bytes, bank: str):
+    txns = list()
+    bank_config = settings.bank_configs[bank]
     try:
-        data_frame = pd.read_excel(input_data, nrows=settings.app_config.READ_ROWS_THRESHOLD, keep_default_na=False)
-        for idx, series in data_frame.iterrows():
-            row_values = series.values
-            for x in row_values:
-                if x in config.DATA_COLUMNS:
-                    return idx + settings.app_config.READ_ROWS_OFFSET
+        data_frame = pd.read_excel(input_data, keep_default_na=False)
+        if data_frame is None:
+            raise ValueError()
+        for i, series in data_frame.iterrows():
+            date_idx = ''
+            desc_idx = ''
+            amount_idx = ''
+            txn = dict()
+            for idx, entry in series.items():
+                if type(entry) == str:
+                    entry = entry.strip()
+                try:
+                    txn_date = datetime.strptime(entry, bank_config.DATE_FORMAT)
+                    if txn_date is not None:
+                        date_idx = idx
+                except Exception as e:
+                    pass
+                try:
+                    desc_match = desc_regex.search(entry)
+                    if desc_match is not None:
+                        desc_idx = idx
+                except Exception as e:
+                    pass
+                try:
+                    amount_str = am_regex.match(entry)
+                    if amount_str is not None and len(amount_idx) == 0:
+                        amount_idx = idx
+                except Exception as e:
+                    pass
+            if len(date_idx) > 0 and len(desc_idx) > 0 and len(amount_idx) > 0:
+                txn['transaction_date'] = datetime.strptime(series.get(date_idx), bank_config.DATE_FORMAT)
+                txn['description'] = series.get(desc_idx)
+                txn['amount'] = float(series.get(amount_idx))
+                txns.append(txn)
+        return txns
     except Exception as e:
         log.logger.error(e, exc_info=True)
-        return config.SKIP_ROWS
+        raise e
 
 _info_method_map = dict({
     constants.SBI: _sbi_info,
