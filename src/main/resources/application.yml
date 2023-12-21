@@ -1,6 +1,7 @@
 okta:
   oauth2:
-    issuer:${ISSUER}
+    issuer: ${ISSUER}
+    audience: ${AUDIENCE}
 spring:
   jpa:
     hibernate:
@@ -11,5 +12,3 @@ spring:
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
     driver-class-name: 'com.mysql.cj.jdbc.Driver'
-  jooq:
-    sql-dialect:

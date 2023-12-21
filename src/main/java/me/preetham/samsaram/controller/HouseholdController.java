@@ -4,15 +4,18 @@ import me.preetham.samsaram.model.Household;
 import me.preetham.samsaram.model.dto.HouseholdDTO;
 import me.preetham.samsaram.repository.HouseholdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping(path = "/api/v1/household")
+@RestController
+@RequestMapping(path = "/api/v1/household", produces = MediaType.APPLICATION_JSON_VALUE)
+@CrossOrigin(origins = "*")
 public class HouseholdController {
   @Autowired
   private HouseholdRepository householdRepository;
