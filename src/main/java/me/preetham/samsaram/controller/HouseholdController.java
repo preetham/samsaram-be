@@ -5,6 +5,7 @@ import me.preetham.samsaram.model.dto.HouseholdDTO;
 import me.preetham.samsaram.repository.HouseholdRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,7 @@ public class HouseholdController {
   private HouseholdRepository householdRepository;
 
   @PostMapping(path = "")
+  @PreAuthorize("hasAuthority('SCOPE_create:household')")
   public @ResponseBody String addHousehold(@RequestBody HouseholdDTO householdDTO) {
     Household household = new Household(householdDTO.getName(), householdDTO.getImageUrl());
     householdRepository.save(household);
@@ -28,6 +30,7 @@ public class HouseholdController {
   }
 
   @GetMapping(path = "")
+  @PreAuthorize("hasAuthority('SCOPE_read:household')")
   public @ResponseBody Iterable<Household> getAllHouseholds() {
     return householdRepository.findAll();
   }
