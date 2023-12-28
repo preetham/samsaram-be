@@ -1,15 +1,16 @@
 package me.preetham.samsaram.controller;
 
 import me.preetham.samsaram.model.Household;
-import me.preetham.samsaram.model.dto.HouseholdDTO;
+import me.preetham.samsaram.model.User;
 import me.preetham.samsaram.repository.HouseholdRepository;
+import me.preetham.samsaram.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,17 +22,13 @@ public class HouseholdController {
   @Autowired
   private HouseholdRepository householdRepository;
 
-  @PostMapping(path = "")
-  @PreAuthorize("hasAuthority('SCOPE_create:household')")
-  public @ResponseBody String addHousehold(@RequestBody HouseholdDTO householdDTO) {
-    Household household = new Household(householdDTO.getName(), householdDTO.getImageUrl());
-    householdRepository.save(household);
-    return "Success";
-  }
+  @Autowired
+  private IUserService userService;
 
   @GetMapping(path = "")
-  @PreAuthorize("hasAuthority('SCOPE_read:household')")
+  @PreAuthorize("hasAuthority('SCOPE_samsaram-backend/read:household')")
   public @ResponseBody Iterable<Household> getAllHouseholds() {
-    return householdRepository.findAll();
+    User user = userService.getUserDetails(SecurityContextHolder.getContext().getAuthentication());
+    return householdRepository.findHouseholdByOwner(user.getEmail());
   }
 }

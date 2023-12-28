@@ -9,30 +9,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
-import lombok.NonNull;
 
 @Getter
 @Entity
-@Table(name = "household")
-public class Household {
-
+@Table(name = "household_members")
+public class HouseholdMembers {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(unique = true)
-  private int id;
-  private String name;
-  private String imageUrl;
+  private long id;
+  private int householdId;
+  private String userId;
   @Enumerated(EnumType.STRING)
   private EntityState status;
-  private String owner;
-
-  public Household() {
-  }
-
-  public Household(@NonNull String name, @NonNull String imageUrl, String owner) {
-    this.name = name;
-    this.imageUrl = imageUrl;
-    this.status = EntityState.active;
-    this.owner = owner;
-  }
 }
