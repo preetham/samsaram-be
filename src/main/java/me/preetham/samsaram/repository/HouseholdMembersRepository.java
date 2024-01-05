@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface HouseholdMembersRepository extends CrudRepository<HouseholdMembers, Integer> {
   public Iterable<HouseholdMembers> findByHouseholdId(int householdId);
+  public HouseholdMembers findHouseholdMembersByUserId(String userId);
 }

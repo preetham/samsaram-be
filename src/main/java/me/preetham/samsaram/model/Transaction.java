@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
+import me.preetham.samsaram.model.dto.TransactionDTO;
 
 @Getter
 @Entity
@@ -22,6 +24,7 @@ public class Transaction {
   private String description;
   private float amount;
   private int categoryId;
+  @Setter
   private String userId;
   private String payee;
   private int bankId;
@@ -31,16 +34,15 @@ public class Transaction {
   public Transaction() {
   }
 
-  public Transaction(long date, @NonNull String description, float amount, int categoryId,
-      String userId, @NonNull String payee, int bankId, TransactionType type, long accountNumber) {
-    this.date = date;
-    this.description = description;
-    this.amount = amount;
-    this.categoryId = categoryId;
-    this.userId = userId;
-    this.payee = payee;
-    this.bankId = bankId;
-    this.type = type;
-    this.accountNumber = accountNumber;
+  public Transaction(TransactionDTO transactionDTO) {
+    this.date = transactionDTO.getDate();
+    this.description = transactionDTO.getDescription();
+    this.amount = transactionDTO.getAmount();
+    this.categoryId = transactionDTO.getCategoryId();
+    this.payee = transactionDTO.getPayee();
+    this.bankId = transactionDTO.getBankId();
+    this.type = TransactionType.valueOf(transactionDTO.getTransactionType());
+    this.accountNumber = transactionDTO.getAccountNumber();
   }
+
 }
