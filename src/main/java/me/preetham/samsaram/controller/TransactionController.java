@@ -65,7 +65,7 @@ public class TransactionController {
   public @ResponseBody String uploadTransactionData(@RequestParam("file") MultipartFile file,
       @RequestParam("bank_id") int bankId) {
     try {
-      dataService.extractTransactions(file.getBytes(), bankId);
+      dataService.extractTransactions(file.getResource().getFile(), bankId);
     } catch (Exception e) {
       logger.error("Error while extracting file data: " + e.getMessage());
       throw new IllegalArgumentException();

@@ -2,6 +2,8 @@ package me.preetham.samsaram.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,6 +30,7 @@ public class Transaction {
   private String userId;
   private String payee;
   private int bankId;
+  @Enumerated(EnumType.STRING)
   private TransactionType type;
   private long accountNumber;
 
