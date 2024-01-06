@@ -22,16 +22,24 @@ public class Transaction {
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(unique = true)
   private long id;
+  @Setter
   private long date;
+  @Setter
   private String description;
-  private float amount;
+  @Setter
+  private double amount;
+  @Setter
   private int categoryId;
   @Setter
   private String userId;
+  @Setter
   private String payee;
+  @Setter
   private int bankId;
+  @Setter
   @Enumerated(EnumType.STRING)
   private TransactionType type;
+  @Setter
   private long accountNumber;
 
   public Transaction() {

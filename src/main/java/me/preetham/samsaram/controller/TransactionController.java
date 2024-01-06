@@ -1,9 +1,9 @@
 package me.preetham.samsaram.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import me.preetham.samsaram.model.Transaction;
 import me.preetham.samsaram.model.User;
-import me.preetham.samsaram.model.dto.TransactionDTO;
 import me.preetham.samsaram.service.IDataService;
 import me.preetham.samsaram.service.ITransactionService;
 import me.preetham.samsaram.service.IUserService;
@@ -62,14 +62,19 @@ public class TransactionController {
 
   @PostMapping(path = "/upload")
   @PreAuthorize("hasAuthority('SCOPE_samsaram-backend/read:household')")
-  public @ResponseBody String uploadTransactionData(@RequestParam("file") MultipartFile file,
+  public @ResponseBody List<Transaction> uploadTransactionData(@RequestParam("file") MultipartFile file,
       @RequestParam("bank_id") int bankId) {
+//    User user = userService.getUserDetails(SecurityContextHolder.getContext().getAuthentication());
+//    if (user == null || user.getEmail() == null) {
+//      logger.error("Unauthorised user: " + user);
+//      throw new BadJwtException("Unauthorized user");
+//    }
+    User user = new User("kamidi@live.com", "Preetham");
     try {
-      dataService.extractTransactions(file.getResource().getFile(), bankId);
+      return dataService.extractTransactions(user, file.getInputStream(), bankId);
     } catch (Exception e) {
       logger.error("Error while extracting file data: " + e.getMessage());
       throw new IllegalArgumentException();
     }
-    return "Success";
   }
 }

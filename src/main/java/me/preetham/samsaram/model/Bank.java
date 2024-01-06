@@ -19,4 +19,12 @@ public class Bank {
   @Column(unique = true)
   private String name;
   private String logo;
+  private int dateColumn;
+  private int descriptionColumn;
+  private int debitColumn;
+  private int creditColumn;
+  private int balanceColumn;
+  private String headerColumn;
+  private String datePattern;
+  private String dateFormat;
 }

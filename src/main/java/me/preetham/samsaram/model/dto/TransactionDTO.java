@@ -8,14 +8,14 @@ public class TransactionDTO {
 
   private final long date;
   private final String description;
-  private final float amount;
+  private final double amount;
   private final int categoryId;
   private final String payee;
   private final int bankId;
   private final String transactionType;
   private final long accountNumber;
 
-  public TransactionDTO(long date, @NonNull String description, float amount, int categoryId,
+  public TransactionDTO(long date, @NonNull String description, double amount, int categoryId,
       String payee,
       int bankId, @NonNull String transactionType, long accountNumber) {
     this.date = date;
