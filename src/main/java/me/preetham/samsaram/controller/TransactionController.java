@@ -69,7 +69,7 @@ public class TransactionController {
 //      logger.error("Unauthorised user: " + user);
 //      throw new BadJwtException("Unauthorized user");
 //    }
-    User user = new User("kamidi@live.com", "Preetham");
+    User user = new User("example@gmail.com", "Preetham");
     try {
       return dataService.extractTransactions(user, file.getInputStream(), bankId);
     } catch (Exception e) {

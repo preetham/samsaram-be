@@ -12,3 +12,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: ${ISSUER}
+elastic:
+  host: ${ELASTIC_HOSTS}
+  fingerprint: ${ELASTIC_CERT_FINGERPRINT}
+  apikey: ${ELASTIC_API_KEY}

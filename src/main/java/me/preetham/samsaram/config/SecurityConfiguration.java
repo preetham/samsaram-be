@@ -1,4 +1,4 @@
-package me.preetham.samsaram.security;
+package me.preetham.samsaram.config;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 

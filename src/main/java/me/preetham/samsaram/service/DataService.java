@@ -7,14 +7,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import me.preetham.samsaram.model.Bank;
+import me.preetham.samsaram.model.Payee;
 import me.preetham.samsaram.model.Transaction;
 import me.preetham.samsaram.model.TransactionProcessState;
 import me.preetham.samsaram.model.TransactionType;
 import me.preetham.samsaram.model.User;
 import me.preetham.samsaram.repository.BankRepository;
+import me.preetham.samsaram.repository.PayeeRepository;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -31,8 +34,12 @@ public class DataService implements IDataService {
   @Autowired
   private BankRepository bankRepository;
 
+  @Autowired
+  private PayeeRepository payeeRepository;
+
   private static final Pattern accountNumberPattern = Pattern.compile("\\d{12,15}");
   private static final Pattern amountPattern = Pattern.compile("^(\\d+(?:[\\.\\,]\\d{0,2})?)$");
+  private static final Integer defaultCategory = 27;
   Logger logger = LoggerFactory.getLogger(DataService.class);
 
   @Override
@@ -43,7 +50,11 @@ public class DataService implements IDataService {
         logger.error("No sheets in workbook");
         return new ArrayList<>();
       }
-      Bank bank = bankRepository.findById(bankId).get();
+      Optional<Bank> bankEntry = bankRepository.findById(bankId);
+      if (bankEntry.isEmpty()) {
+        return new ArrayList<>();
+      }
+      Bank bank = bankEntry.get();
       Sheet sheet = workbook.getSheetAt(0);
       Iterator<Row> rowIterator = sheet.rowIterator();
       List<Transaction> transactions = new ArrayList<>();
@@ -59,7 +70,8 @@ public class DataService implements IDataService {
           Cell cell = cellIterator.next();
           switch (cell.getCellType()) {
             case STRING:
-              if (transactionProcessState == TransactionProcessState.not_found && accountNumber <= 0) {
+              if (transactionProcessState == TransactionProcessState.not_found
+                  && accountNumber <= 0) {
                 accountNumber = parseAccountNumber(cell);
               }
               if (checkTransactionStart(cell, bank)) {
@@ -136,10 +148,20 @@ public class DataService implements IDataService {
     if (cell.getColumnIndex() != bank.getDescriptionColumn()) {
       return transaction;
     }
-    transaction.setDescription(cell.getStringCellValue().trim());
+    String description = cell.getStringCellValue().trim();
+    transaction.setDescription(description);
     transaction.setPayee("");
-    transaction.setAccountNumber(0);
-    transaction.setCategoryId(27);
+    transaction.setCategoryId(defaultCategory);
+    String[] entities = description.split(bank.getDescriptionSeparator());
+    if (entities.length > 4) {
+      String payeeStr = entities[3].trim();
+      Payee payee = payeeRepository.findPayeeByName(payeeStr);
+      if (payee == null) {
+        return transaction;
+      }
+      transaction.setPayee(payee.getName());
+      transaction.setCategoryId(payee.getCategory());
+    }
     return transaction;
   }
 

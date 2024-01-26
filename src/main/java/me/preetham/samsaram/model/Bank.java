@@ -27,4 +27,5 @@ public class Bank {
   private String headerColumn;
   private String datePattern;
   private String dateFormat;
+  private String descriptionSeparator;
 }
