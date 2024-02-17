@@ -12,10 +12,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import me.preetham.samsaram.model.Bank;
 import me.preetham.samsaram.model.Payee;
-import me.preetham.samsaram.model.Transaction;
 import me.preetham.samsaram.model.TransactionProcessState;
 import me.preetham.samsaram.model.TransactionType;
 import me.preetham.samsaram.model.User;
+import me.preetham.samsaram.model.dto.TransactionResponseDTO;
 import me.preetham.samsaram.repository.BankRepository;
 import me.preetham.samsaram.repository.PayeeRepository;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -27,6 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class DataService implements IDataService {
@@ -43,7 +44,7 @@ public class DataService implements IDataService {
   Logger logger = LoggerFactory.getLogger(DataService.class);
 
   @Override
-  public List<Transaction> extractTransactions(User user, InputStream fileInputStream, int bankId) {
+  public List<TransactionResponseDTO> extractTransactions(User user, InputStream fileInputStream, int bankId) {
     try (Workbook workbook = new HSSFWorkbook(fileInputStream)) {
       int numberOfSheets = workbook.getNumberOfSheets();
       if (numberOfSheets < 1) {
@@ -57,13 +58,13 @@ public class DataService implements IDataService {
       Bank bank = bankEntry.get();
       Sheet sheet = workbook.getSheetAt(0);
       Iterator<Row> rowIterator = sheet.rowIterator();
-      List<Transaction> transactions = new ArrayList<>();
+      List<TransactionResponseDTO> transactions = new ArrayList<>();
       TransactionProcessState transactionProcessState = TransactionProcessState.not_found;
       long accountNumber = 0;
       while (rowIterator.hasNext() && transactionProcessState != TransactionProcessState.done) {
         Row row = rowIterator.next();
         Iterator<Cell> cellIterator = row.cellIterator();
-        Transaction transaction = new Transaction();
+        TransactionResponseDTO transaction = new TransactionResponseDTO();
         transaction.setBankId(bankId);
         transaction.setUserId(user.getEmail());
         while (cellIterator.hasNext() && transactionProcessState != TransactionProcessState.done) {
@@ -104,7 +105,7 @@ public class DataService implements IDataService {
     return new ArrayList<>();
   }
 
-  private Transaction parseAmount(Cell cell, Bank bank, Transaction transaction) {
+  private TransactionResponseDTO parseAmount(Cell cell, Bank bank, TransactionResponseDTO transaction) {
     if (cell.getColumnIndex() != bank.getCreditColumn()
         && cell.getColumnIndex() != bank.getDebitColumn()) {
       return transaction;
@@ -119,15 +120,15 @@ public class DataService implements IDataService {
     }
     transaction.setAmount(amount);
     if (cell.getColumnIndex() == bank.getDebitColumn()) {
-      transaction.setType(TransactionType.debit);
+      transaction.setType(TransactionType.debit.toString());
     }
     if (cell.getColumnIndex() == bank.getCreditColumn()) {
-      transaction.setType(TransactionType.credit);
+      transaction.setType(TransactionType.credit.toString());
     }
     return transaction;
   }
 
-  private Transaction parseDate(Cell cell, Bank bank, Transaction transaction)
+  private TransactionResponseDTO parseDate(Cell cell, Bank bank, TransactionResponseDTO transaction)
       throws ParseException {
     if (cell.getColumnIndex() != bank.getDateColumn()) {
       return transaction;
@@ -144,22 +145,23 @@ public class DataService implements IDataService {
     return transaction;
   }
 
-  private Transaction parseDescription(Cell cell, Bank bank, Transaction transaction) {
+  private TransactionResponseDTO parseDescription(Cell cell, Bank bank, TransactionResponseDTO transaction) {
     if (cell.getColumnIndex() != bank.getDescriptionColumn()) {
       return transaction;
     }
     String description = cell.getStringCellValue().trim();
     transaction.setDescription(description);
-    transaction.setPayee("");
+    transaction.setPayee(new Payee());
     transaction.setCategoryId(defaultCategory);
     String[] entities = description.split(bank.getDescriptionSeparator());
     if (entities.length > 4) {
       String payeeStr = entities[3].trim();
       Payee payee = payeeRepository.findPayeeByName(payeeStr);
       if (payee == null) {
+        transaction.getPayee().setName(StringUtils.capitalize(payeeStr.toLowerCase()));
         return transaction;
       }
-      transaction.setPayee(payee.getName());
+      transaction.setPayee(payee);
       transaction.setCategoryId(payee.getCategory());
     }
     return transaction;
